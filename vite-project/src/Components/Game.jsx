@@ -30,6 +30,7 @@ function Game(props) {
       //   stepNumber: history.length,
       //   xIsNext: !this.state.xIsNext
       // });
+
       setHistory(history.concat([
         {
           squares: squares
