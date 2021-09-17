@@ -12,7 +12,6 @@ function Game(props) {
     const[xIsNext, setXIsNext] = useState(true);
   
     const handleClick = (i) => {
-     // const history = this.state.history.slice(0, this.state.stepNumber + 1);
       setHistory(history.slice(0, stepNumber + 1));
       const current = history[history.length - 1];
       const squares = current.squares.slice();
@@ -21,15 +20,6 @@ function Game(props) {
         return;
       }
       squares[i] = xIsNext ? "X" : "O";
-      // this.setState({
-      //   history: history.concat([
-      //     {
-      //       squares: squares
-      //     }
-      //   ]),
-      //   stepNumber: history.length,
-      //   xIsNext: !this.state.xIsNext
-      // });
 
       setHistory(history.concat([
         {
@@ -41,10 +31,7 @@ function Game(props) {
     }
   
    const jumpTo = (step) => {
-      // this.setState({
-      //   stepNumber: step,
-      //   xIsNext: (step % 2) === 0
-      // });
+
       setStepNumber(step);
       setXIsNext((step % 2) === 0);
     }
